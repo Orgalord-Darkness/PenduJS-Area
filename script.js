@@ -16,4 +16,19 @@ const method = () => {
         },2000)
     })
 }; 
-method(); 
+method();
+
+fetch('https://www.youtube.com/watch?v=_m3NVEP3dfY').then(function(response) {
+    return console.log(response.blob());
+})
+
+const pendu = () => {
+    const randomWord = randWord(); 
+    console.log('Choisissez la difficulté : ');     
+}
+pendu(); 
+
+function lire() {
+    const valeur = document.getElementById("champ").value;
+    console.log(valeur);
+}
