@@ -1,0 +1,8 @@
+Jeu du pendu
+Le système propose des mots issus du dictionnaire. : 
+
+1. On peut choisir le niveau de difficulté qui correspond aux nombres d’éléments de la potence et du pendu
+
+2. Le joueur a un certains nombre de tentatives pour trouver toutes les lettres du mot.
+
+3. Le jeu conserve l’historique des scores dans le stockage local et on peut le consulter
