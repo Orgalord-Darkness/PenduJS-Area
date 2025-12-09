@@ -6,3 +6,43 @@ Le système propose des mots issus du dictionnaire. :
 2. Le joueur a un certains nombre de tentatives pour trouver toutes les lettres du mot.
 
 3. Le jeu conserve l’historique des scores dans le stockage local et on peut le consulter
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Algorithme pendu 
+
+words -> dictionnaire de données
+mot -> mot random
+Fonction pendu (mot, réponse, niveau) {
+    compteur = niveau; 
+    tab résultat -> [] 
+    Faire
+        Pour i allant de 0 à longueur réponse :
+            var verif -> faux;  
+            Pour j allant de 0 à longueur mot :
+                Si réponse[i] = mot[i] Alors :
+                    verif -> vrai;  
+                    resultat[i] -> réponse[i] 
+                Fin Si
+            Fin Si
+            Si verif est faux Alors
+                resultat[i] -> null  
+            Fin Si
+        Fin Pour
+        compteur -> compteur - 1
+    Tant que compteur > 0
+    Retourner resultat
+}   
+
+Fonction Placeholder(valeur){
+    Var resultat -> '' 
+    Pour i allant de 0 à longuer valeur : 
+        Si valeur[i] = null Alors 
+            resultat = resultat + '$nbsp'
+        Sinon 
+            resultat = resultat + valeur[i]
+        Fin Si 
+    Fin Pour 
+    Retourner resultat 
+}
+
