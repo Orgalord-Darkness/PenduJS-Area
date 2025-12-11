@@ -6,15 +6,18 @@
     <body>
         <div class="container" id="container">
             <h1>Sélectionner un niveau de difficulté</h1>
-            <input type="number" id="niveau">
-            <button id="jouer">Jouer</button>
+            <!-- <input type="number" id="niveau">
+            <button id="jouer">Jouer</button> -->
 
-            <!-- <h1>Insérer une valeur</h1>
-            <input type='text' id='response'/>
-            <button id='valider'>Valider</button>`;  -->
+            <h1>Insérer une valeur</h1>
+            <input type='text' id='input'/>
+            <button id='tenter'>Valider</button>
+            <div id='container_word'></div>
+            <div id='container_win'></div>
         </div>
         <!-- <input id="champ" type="text">
         <button onclick="lire()">OK</button> -->
-        <script type="module" src="assets/js/script.js"></script>
+        <button style='margin-top: 50px; 'onClick='location.reload()'>Recharger</button>
+        <script type="module" src="assets/js/controller.js"></script>
     </body>
 </html>

@@ -1,0 +1,7 @@
+// document.getElementById('valider').addEventListener('click', (element) => {
+//     console.log('e');
+//     const input = document.getElementById('response').value;
+//     const pendugame = pendu(word, input);
+//     display('',pendugame)
+//     console.log('test pendu : ',pendugame, 'word : ',word);
+// });
