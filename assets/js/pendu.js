@@ -1,6 +1,10 @@
 export default class Pendu{
     word = ""; 
     response = ""; 
+    level = ""; 
+    nb_try = null; 
+    word_length = null; 
+    tries = [1]; 
     // constructor(word, response){
     //     this.word = word; 
     //     this.response = response; 
@@ -12,22 +16,30 @@ export default class Pendu{
     setResponse(response){
         this.response = response; 
     }
+
+    setLevel(level){
+        this.level = level; 
+    }
+
     save(letter){
         if (!this.letters.includes(letter)) {
             this.letters.push(letter);
         }
 
     }   
+    tryFail(){
+        this.tries.push(1);
+    }   
 
-    draw(){
-        return this.word.split("").map((letter) => {
+    draw(){ 
+        return this.word.split("").map((letter) => { 
             if(this.response.includes(letter)){
                 this.save(letter);
                 return letter
             }
             this.save(' _ ')
             return ' _'; 
-        }).join("")
+        }).join("");
     }
 
     checkWin(){
@@ -39,6 +51,18 @@ export default class Pendu{
         })
         return compteur; 
 
+    }
+
+    checkLevel(){
+        return this.tries.length >= level; 
+    }
+
+    getLevel(){
+        return this.level; 
+    }
+
+    getTries(){
+        return this.tries.length; 
     }
 
     getLetters(){

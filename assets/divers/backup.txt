@@ -5,3 +5,24 @@
 //     display('',pendugame)
 //     console.log('test pendu : ',pendugame, 'word : ',word);
 // });
+---------------------------------------------------------------------------
+// setLevel(level){
+    //     this.level = level; 
+    //     switch(level){
+    //         case facile: 
+    //             nb_try = 10; 
+    //             word_length = 1; 
+    //             break; 
+    //         case moyen:   
+    //             nb_try = 5; 
+    //             word_lenght = 6; 
+    //             break; 
+    //         case difficile: 
+    //             nb_try = 3; 
+    //             word_length = 10; 
+    //             break; 
+    //         default: 
+    //             nb_try =10; 
+    //             word_length = 1; 
+    //     }
+    // }

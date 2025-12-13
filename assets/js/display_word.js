@@ -4,9 +4,9 @@ export const display = (word) => {
 
 export const displayLetters = (word, letters) =>{
     return word.split("").map((letter) => {
-            if(letters.includes(letter)){
-                return letter
-            }
-            return ' _'; 
-        }).join("")
+        if(letters.includes(letter)){
+            return letter
+        }
+        return ' _'; 
+    }).join("")
 }

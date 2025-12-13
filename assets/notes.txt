@@ -46,3 +46,5 @@ Fonction Placeholder(valeur){
     Retourner resultat 
 }
 
+
+
