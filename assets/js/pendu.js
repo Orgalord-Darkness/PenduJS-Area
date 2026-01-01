@@ -5,6 +5,7 @@ export default class Pendu{
     nb_try = null; 
     word_length = null; 
     tries = [1]; 
+    compteur = parseInt(localStorage.getItem("compteur")) || 0; 
     // constructor(word, response){
     //     this.word = word; 
     //     this.response = response; 
@@ -19,6 +20,14 @@ export default class Pendu{
 
     setLevel(level){
         this.level = level; 
+    }
+
+    getCompteur(){
+        document.getElementById("compteur").textContent = this.compteur;
+    }
+
+    setCompteur(){
+        this.compteur++ ; 
     }
 
     save(letter){
