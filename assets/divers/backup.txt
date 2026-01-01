@@ -26,3 +26,28 @@
     //             word_length = 1; 
     //     }
     // }
+
+    --------------------------------------------------------------
+
+    document.getElementById('difficulte').addEventListener('click', () => {
+    const difficulte = document.getElementById('difficulte_input').value; 
+    let minLength = null; 
+    switch(difficulte){
+        case Facile :
+            minLength = 3; 
+            break; 
+            
+        case Moyen : 
+            minLength = 6; 
+            break; 
+
+        case Difficile: 
+            minLength = 14; 
+
+        default: 
+            minLength = 0; 
+
+    }
+
+    const word = randWord(words, minLength); 
+})
