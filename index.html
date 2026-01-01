@@ -5,20 +5,22 @@
     </head>
     <body>
         <div class="container" id="container">
-            <h1>Sélectionner le nombre de tentatives</h1>
-            <input id="level" type="number"/>
+            <button id="start" style='margin-bottom: 50px'>Commencer</button>
+            <!-- <h1>Sélectionner le nombre de tentatives</h1>
+            <input id="level" type="number"/> -->
             <h1>Sélectionner un niveau de difficulté</h1>
             <select id="difficulte_input">
                 <option value="facile">Facile</option>
-                <option value="facile">Moyen</option>
-                <option value="facile">Difficile</option>
+                <option value="moyen">Moyen</option>
+                <option value="difficile">Difficile</option>
             </select>
-            <button id="difficulte">Jouer</button>
+            <button id="difficulte">Difficulte</button>
 
             <h1>Insérer une valeur</h1>
             <input type='text' id='input'/>
             <button id='tenter'>Valider</button>
             <div id='container_word'></div>
+            <div id='container_fail'></div>
             <div id='container_win'></div>
             
         </div>

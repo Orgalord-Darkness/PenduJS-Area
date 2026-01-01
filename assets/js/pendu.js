@@ -2,7 +2,7 @@ export default class Pendu{
     word = ""; 
     response = ""; 
     level = ""; 
-    nb_try = null; 
+    nb_try = 0; 
     word_length = null; 
     tries = [1]; 
     compteur = parseInt(localStorage.getItem("compteur")) || 0; 
@@ -10,6 +10,9 @@ export default class Pendu{
     //     this.word = word; 
     //     this.response = response; 
     // } 
+    getWord(){
+        return this.word; 
+    }
     setWord(word){
         this.word = word; 
     }
@@ -35,9 +38,22 @@ export default class Pendu{
             this.letters.push(letter);
         }
 
-    }   
+    }
+    
+    getTries(){
+        return this.tries; 
+    }
+
+    getNbTries(){
+        return this.nb_try; 
+    }
+    
     tryFail(){
         this.tries.push(1);
+        this.nb_try++
+    }
+    resetTry(){
+        this.tries = [1]; 
     }   
 
     draw(){ 
@@ -70,7 +86,7 @@ export default class Pendu{
         return this.level; 
     }
 
-    getTries(){
+    getTriesLength(){
         return this.tries.length; 
     }
 

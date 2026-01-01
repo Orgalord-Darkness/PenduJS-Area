@@ -25,6 +25,6 @@ export const words = [
   "xml",          // X
   "youtube",      // Y
   "zip",          // Z
-  "anticonstitutionnellement"
+  "anticonstitutionnellement",
 ];
 
