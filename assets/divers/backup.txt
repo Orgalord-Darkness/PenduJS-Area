@@ -141,3 +141,24 @@ document.getElementById('tenter').addEventListener('click', () => {
 document.getElementById('affichage_compteur').addEventListener('click', () =>{
     pendu.getCompteur(); 
 })
+
+---------------------------------------
+
+// if(tentative === true){
+//     if(pendu.checkWin() === true){
+//     pendu.setCompteur(); 
+//     container_win.innerHTML = `<h1>Félicitation, tu as trouvé le mot "${word}"</h1>`; 
+// }
+// }else{
+//     pendu.tryFail(); 
+//     container_fail.innerHTML += ` | `;
+// }
+
+// container_word.innerHTML =  display(pendu.draw().join(""));
+const draw_word = pendu.draw(); 
+
+
+ // container_word.innerHTML =  display(pendu.draw().join(""));
+
+ const draw_word = 
+ // let showLetters = displayLetters(word, pendu.letters);

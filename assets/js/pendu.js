@@ -16,7 +16,7 @@ export default class Pendu{
     setWord(word){
         this.word = word; 
     }
-    letters = Array.from(this.word.length).fill("_");; 
+    letters = Array.from(this.word.length).fill("_");
     setResponse(response){
         this.response = response; 
     }
@@ -53,7 +53,8 @@ export default class Pendu{
         this.nb_try++
     }
     resetTry(){
-        this.tries = [1]; 
+        this.tries = [1];
+        this.letters = Array.from(this.word.length).fill("_"); 
     }   
 
     draw(){ 

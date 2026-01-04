@@ -10,3 +10,11 @@ export const displayLetters = (word, letters) =>{
         return ' _'; 
     }).join("")
 }
+
+export const checkDisplay = (word, l) => {
+    word.split("").forEach((letter) => {
+        if(l === letter){
+            tentative = true; 
+        }
+    });
+};
