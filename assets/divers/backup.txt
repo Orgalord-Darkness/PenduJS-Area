@@ -162,3 +162,314 @@ const draw_word = pendu.draw();
 
  const draw_word = 
  // let showLetters = displayLetters(word, pendu.letters);
+ ==========================================================================================================================
+ ==========================================================================================================================
+
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div class="container" id="container">
+            <button id="start" style='margin-bottom: 50px'>Commencer</button>
+            <!-- <h1>Sélectionner le nombre de tentatives</h1>
+            <input id="level" type="number"/> -->
+            <h1>Sélectionner un niveau de difficulté</h1>
+            <select id="difficulte_input">
+                <option value="facile">Facile</option>
+                <option value="moyen">Moyen</option>
+                <option value="difficile">Difficile</option>
+            </select>
+
+            <h1>Insérer une valeur</h1>
+            <input type='text' id='input'/>
+            <button id='tenter'>Valider</button>
+            <div id='container_word'></div>
+            <div id='container_fail'></div>
+            <div id='container_win'></div>
+            
+        </div>
+        <!-- <input id="champ" type="text">
+        <button onclick="lire()">OK</button> -->
+        <button style='margin-top: 50px;' id='affichage_compteur'>Compteur :</button>
+        <div id='compteur'></div>
+        <button style='margin-top: 50px; 'onClick='location.reload()'>Recharger</button>
+        <script type="module" src="assets/js/controller.js"></script>
+    </body>
+</html>
+
+============================================================================================================================
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <h1>PenduJS Area</h1>
+        <div class="container" id="container">
+            <button id="start" style='margin-bottom: 50px'>Commencer</button>
+            <!-- <h1>Sélectionner le nombre de tentatives</h1>
+            <input id="level" type="number"/> -->
+            <h1>Sélectionner un niveau de difficulté</h1>
+            <select id="difficulte_input">
+                <option value="facile">Facile</option>
+                <option value="moyen">Moyen</option>
+                <option value="difficile">Difficile</option>
+            </select>
+
+            <h1>Insérer une valeur</h1>
+            <input type='text' id='input'/>
+            <button id='tenter'>Valider</button>
+            <div id='container_word'></div>
+            <div id='container_fail'></div>
+            <div id='container_win'></div>
+            
+        </div>
+        <!-- <input id="champ" type="text">
+        <button onclick="lire()">OK</button> -->
+        <button style='margin-top: 50px;' id='affichage_compteur'>Score :</button>
+        <div id='compteur'></div>
+        <button style='margin-top: 50px; 'onClick='location.reload()'>Recharger</button>
+        <script type="module" src="assets/js/controller.js"></script>
+    </body>
+</html>
+
+-------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenduJS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h1>PenduJS Area</h1>
+    <div class="container" id="container">
+        <button id="start" class="btn">Commencer</button>
+
+        <h1>Sélectionner un niveau de difficulté</h1>
+        <select id="difficulte_input" class="select">
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+        </select>
+
+        <h1>Insérer une valeur</h1>
+        <input type="text" id="input" class="input"/>
+        <button id="tenter" class="btn">Valider</button>
+
+        <div id="container_word"></div>
+        <div id="container_fail"></div>
+        <div id="container_win"></div>
+
+        <div id="score-container">
+            <button id="affichage_compteur" class="btn">Score :</button>
+            <div id="compteur"></div>
+        </div>
+
+        <button onClick="location.reload()" class="btn">Recharger</button>
+    </div>
+
+    <script type="module" src="assets/js/controller.js"></script>
+</body>
+</html>
+
+================================
+
+/* ===============================
+   PenduJS-Area — Dark Fantasy
+   =============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=JetBrains+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #1b1b1b, #050505);
+  color: #e6e6e6;
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image en-tête */
+#header {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#header-image {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 5px solid #b30000; /* Ajoute une bordure sous l'image */
+}
+
+/* Conteneur principal */
+#container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(10, 10, 10, 0.85);
+  border: 2px solid #3a0000;
+  box-shadow: 0 0 30px rgba(150, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Titres */
+h1 {
+  font-family: 'UnifrakturCook', cursive;
+  color: #b30000;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(180, 0, 0, 0.6);
+}
+
+/* Boutons */
+button {
+  background: linear-gradient(145deg, #2a0000, #120000);
+  color: #f2f2f2;
+  border: 1px solid #700000;
+  padding: 10px 20px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #700000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Inputs & select */
+input, select {
+  background: #0d0d0d;
+  color: #fff;
+  border: 1px solid #550000;
+  padding: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
+}
+
+/* Mot à deviner */
+#container_word {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 8px;
+}
+
+/* Erreurs */
+#container_fail {
+  margin-top: 20px;
+  color: #ff4d4d;
+  font-size: 1.2rem;
+}
+
+/* Messages victoire / défaite */
+#container_win h1 {
+  color: #ff0000;
+  animation: flicker 1.5s infinite alternate;
+  text-align: center;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 5px red; }
+  100% { opacity: 0.7; text-shadow: 0 0 20px darkred; }
+}
+
+/* Compteur / pendu ASCII */
+#compteur {
+  margin-top: 20px;
+  padding: 20px;
+  background: #000;
+  border: 1px solid #550000;
+  font-family: 'JetBrains Mono', monospace;
+  white-space: pre;
+  color: #ffcccc;
+  box-shadow: inset 0 0 20px rgba(150, 0, 0, 0.5);
+}
+
+/* Score container */
+#score-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+===========
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PenduJS - Dark Fantasy</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <!-- En-tête avec une image -->
+        <div id="header">
+            <img src="assets/fichiers/berserk.webp" alt="PenduJS" id="header-image" style="width: 100%; height: auto;"/>
+        </div>
+
+        <div class="container" id="container">
+            <h1>PenduJS - Area</h1>
+
+            <!-- Section des règles -->
+            <div id="rules-section">
+                <h2>Règles du jeu</h2>
+                <ul>
+                    <li>8 tentatives pour deviner le mot.</li>
+                    <li>1 point par partie gagnée.</li>
+                </ul>
+            </div>
+
+            <!-- Section pour démarrer le jeu -->
+            <button id="start" style="margin-bottom: 50px;">Commencer</button>
+
+            <!-- Sélectionner un niveau de difficulté -->
+            <h1>Sélectionner un niveau de difficulté</h1>
+            <select id="difficulte_input">
+                <option value="facile">Facile</option>
+                <option value="moyen">Moyen</option>
+                <option value="difficile">Difficile</option>
+            </select>
+
+            <!-- Section pour entrer la lettre à deviner -->
+            <h1>Insérer une valeur</h1>
+            <input type="text" id="input"/>
+            <button id="tenter">Valider</button>
+
+            <!-- Zones pour afficher le mot, l'historique des lettres et les tentatives -->
+            <div id="container_word"></div>
+            <div id="container_history"></div>
+            <div id="container_try"></div>
+            <div id="container_fail"></div>
+            <div id="container_win"></div>
+        </div>
+
+        <!-- Affichage du score et bouton pour recharger la page -->
+        <button style="margin-top: 50px;" id="affichage_compteur">Score</button>
+        <div id="compteur"></div>
+        <button style="margin-top: 50px;" onClick="location.reload()">Recharger</button>
+
+        <script type="module" src="assets/js/controller.js"></script>
+    </body>
+</html>

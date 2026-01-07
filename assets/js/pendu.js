@@ -6,6 +6,7 @@ export default class Pendu{
     word_length = null; 
     tries = [1]; 
     compteur = parseInt(localStorage.getItem("compteur")) || 0; 
+    word_history = []; 
     // constructor(word, response){
     //     this.word = word; 
     //     this.response = response; 
@@ -33,6 +34,14 @@ export default class Pendu{
         this.compteur++ ; 
     }
 
+    getWordHistory(){
+        return this.word_history; 
+    }
+
+    setWordHistory(word){
+        this.word_history.push(word); 
+    }
+
     save(letter){
         if (!this.letters.includes(letter)) {
             this.letters.push(letter);
@@ -54,7 +63,9 @@ export default class Pendu{
     }
     resetTry(){
         this.tries = [1];
-        this.letters = Array.from(this.word.length).fill("_"); 
+        this.letters = Array.from(this.word.length).fill("_");
+        this.nb_try = 0;
+        this.word_history = [];   
     }   
 
     draw(){ 
@@ -67,6 +78,24 @@ export default class Pendu{
             return ' _'; 
         }).join("");
     }
+
+    checkLetter = (word, l) => { 
+        let find = false;
+        let find_history = false;   
+        word.split("").forEach((letter) => {
+            if(l === letter){
+                find = true; 
+            }
+        });
+        this.getWordHistory().forEach((letter) => {
+            if(l === letter){
+                find_history = true; 
+            }
+        }); 
+        if(!find && !find_history){
+            this.setWordHistory(l);
+        } 
+    };
 
     checkWin(){
         let compteur = true; 
@@ -81,6 +110,26 @@ export default class Pendu{
 
     checkLevel(){
         return this.tries.length >= level; 
+    }
+
+    checkHistory(l){
+        const input = l.split("");
+        let check = false; 
+        if(this.word_history.length === 0){
+            return false; 
+        }
+        this.word_history.forEach((letter) => {
+            
+            if (letter === input[0]){
+                
+                check = true;
+                return check ;   
+            
+            }
+        
+        }); 
+         
+        return check; 
     }
 
     getLevel(){

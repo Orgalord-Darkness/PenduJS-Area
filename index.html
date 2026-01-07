@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PenduJS - Dark Fantasy</title>
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
+        <!-- En-tête avec une image -->
+        <div id="header">
+            <img src="assets/fichiers/berserk.webp" alt="PenduJS" id="header-image" style="width: 100%; height: auto;"/>
+        </div>
+
         <div class="container" id="container">
-            <button id="start" style='margin-bottom: 50px'>Commencer</button>
-            <!-- <h1>Sélectionner le nombre de tentatives</h1>
-            <input id="level" type="number"/> -->
+            <h1>PenduJS - Area</h1>
+
+            <!-- Section des règles -->
+            <div id="rules-section">
+                <h2>Règles du jeu</h2>
+                <ul>
+                    <li>8 tentatives pour deviner le mot.</li>
+                    <li>1 point par partie gagnée.</li>
+                </ul>
+            </div>
+
+            <!-- Section pour démarrer le jeu -->
+            <button id="start" style="margin-bottom: 50px;">Commencer</button>
+
+            <!-- Sélectionner un niveau de difficulté -->
             <h1>Sélectionner un niveau de difficulté</h1>
             <select id="difficulte_input">
                 <option value="facile">Facile</option>
@@ -15,19 +35,24 @@
                 <option value="difficile">Difficile</option>
             </select>
 
+            <!-- Section pour entrer la lettre à deviner -->
             <h1>Insérer une valeur</h1>
-            <input type='text' id='input'/>
-            <button id='tenter'>Valider</button>
-            <div id='container_word'></div>
-            <div id='container_fail'></div>
-            <div id='container_win'></div>
-            
+            <input type="text" id="input"/>
+            <button id="tenter">Valider</button>
+
+            <!-- Zones pour afficher le mot, l'historique des lettres et les tentatives -->
+            <div id="container_word"></div>
+            <div id="container_history"></div>
+            <div id="container_try"></div>
+            <div id="container_fail"></div>
+            <div id="container_win"></div>
         </div>
-        <!-- <input id="champ" type="text">
-        <button onclick="lire()">OK</button> -->
-        <button style='margin-top: 50px;' id='affichage_compteur'>Compteur :</button>
-        <div id='compteur'></div>
-        <button style='margin-top: 50px; 'onClick='location.reload()'>Recharger</button>
+
+        <!-- Affichage du score et bouton pour recharger la page -->
+        <button style="margin-top: 50px;" id="affichage_compteur">Score</button>
+        <div id="compteur"></div>
+        <button style="margin-top: 50px;" onClick="location.reload()">Recharger</button>
+
         <script type="module" src="assets/js/controller.js"></script>
     </body>
 </html>
