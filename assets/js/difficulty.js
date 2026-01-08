@@ -46,3 +46,35 @@ export const getDifficultyTry = (level) => {
     }
     return nb_try; 
 }
+
+export const facile = {
+     
+}
+
+export const moyen = {
+}
+
+export const difficile = {
+    
+}
+
+export const difficultyLevel = {
+    facile: {
+        minLength : 0, 
+        maxLength: 4, 
+        nb_try: 8,    
+    }, 
+
+    moyen: {
+        minLength : 5, 
+        maxLength: 6, 
+        nb_try: 5,
+    }, 
+
+    difficile: {
+        minLength : 8, 
+        maxLength: 100, 
+        nb_try: 3,
+    }
+
+}
