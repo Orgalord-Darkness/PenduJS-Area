@@ -39,7 +39,6 @@ document.getElementById('tenter').addEventListener('click', () => {
         pendu.setWord(word);
         pendu.setResponse(input); 
         pendu.setLevel(nb_tries);
-        let tries = pendu.getNbTries();
 
         if (pendu.getTriesLength() < pendu.getLevel()){
             const checkHistory = pendu.checkHistory(input);  
