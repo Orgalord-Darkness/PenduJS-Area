@@ -1,7 +1,6 @@
 import {words} from './list.js';
 
 const randomInt = max => Math.floor(Math.random() * max)
-const container = document.querySelector('.container');
 export function randWordDifficult(tabs, minLength){
     do {
         const count = tabs.length;
