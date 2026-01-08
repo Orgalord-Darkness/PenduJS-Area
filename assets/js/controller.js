@@ -10,8 +10,7 @@ let container_win = document.getElementById('container_win');
 let container_fail = document.getElementById('container_fail');
 let container_try = document.getElementById('container_try');
 let container_history = document.getElementById('container_history');
-let level = ''; 
-let ascii = ''; 
+let level = '';
 
 document.getElementById('start').addEventListener('click', () => {
     
