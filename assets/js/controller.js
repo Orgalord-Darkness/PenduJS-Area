@@ -50,7 +50,7 @@ document.getElementById('tenter').addEventListener('click', () => {
             if (pendu.checkWin() === true){
                
                 pendu.setCompteur(); 
-                container_win.innerHTML = `<h1>Félicitation, tu as trouvé le mot "${word}"</h1>`; 
+                container_win.innerHTML = `<p>Félicitation, tu as trouvé le mot "${word}"</p>`; 
             
             } else if (!tentative && !checkHistory){
                 
@@ -62,7 +62,7 @@ document.getElementById('tenter').addEventListener('click', () => {
             container_try.innerHTML = `<p>Tentatives : ${pendu.getNbTries()} /8</p>`
         } else {
             container_fail.innerHTML = `<pre> ${penduAscii[pendu.getNbTries()]} </pre>`
-            container_win.innerHTML = `<h1>Perdu le mot était "${word}"</h1>`;
+            container_win.innerHTML = `<p>Perdu le mot était "${word}"</p>`;
             container_try.innerHTML = ``
         
         }

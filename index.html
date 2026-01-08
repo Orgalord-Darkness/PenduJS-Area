@@ -7,27 +7,21 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <!-- En-tête avec une image -->
-        <div id="header">
-            <img src="assets/fichiers/berserk.webp" alt="PenduJS" id="header-image" style="width: 100%; height: auto;"/>
-        </div>
 
         <div class="container" id="container">
             <h1>PenduJS - Area</h1>
-
-            <!-- Section des règles -->
+            <button onClick="location.reload()">Recharger</button>
             <div id="rules-section">
                 <h2>Règles du jeu</h2>
                 <ul>
-                    <li>8 tentatives pour deviner le mot.</li>
+                    <li>8 tentatives pour deviner le mot par partie.</li>
+                    <li>Sélectinner un niveau de difficulté.</li>
+                    <li>Pour lancer une nouvelle partie cliquer sur commencer.</li> 
                     <li>1 point par partie gagnée.</li>
+                    <li>Les lettres avec accents sont distinctes (e != é).</li>
                 </ul>
             </div>
 
-            <!-- Section pour démarrer le jeu -->
-            <button id="start" style="margin-bottom: 50px;">Commencer</button>
-
-            <!-- Sélectionner un niveau de difficulté -->
             <h1>Sélectionner un niveau de difficulté</h1>
             <select id="difficulte_input">
                 <option value="facile">Facile</option>
@@ -35,23 +29,25 @@
                 <option value="difficile">Difficile</option>
             </select>
 
-            <!-- Section pour entrer la lettre à deviner -->
+            <button id="start" style="margin-bottom: 50px;">Commencer</button>
+            
+            <div id="container_win"></div>
+
             <h1>Insérer une valeur</h1>
             <input type="text" id="input"/>
             <button id="tenter">Valider</button>
 
-            <!-- Zones pour afficher le mot, l'historique des lettres et les tentatives -->
-            <div id="container_word"></div>
+            <div id="word_fail_wrapper">
+                <div id="container_word"></div>
+                <div id="container_fail"></div>
+            </div>
+
             <div id="container_history"></div>
             <div id="container_try"></div>
-            <div id="container_fail"></div>
-            <div id="container_win"></div>
         </div>
 
-        <!-- Affichage du score et bouton pour recharger la page -->
-        <button style="margin-top: 50px;" id="affichage_compteur">Score</button>
+        <button id="affichage_compteur">Score</button>
         <div id="compteur"></div>
-        <button style="margin-top: 50px;" onClick="location.reload()">Recharger</button>
 
         <script type="module" src="assets/js/controller.js"></script>
     </body>
