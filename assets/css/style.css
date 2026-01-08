@@ -114,6 +114,9 @@ input, select {
 }
 
 /* Compteur / pendu ASCII */
+#affichage_compteur {
+  margin-top : 30px; 
+}
 #compteur {
   margin-top: 3px; 
   padding: 5px;

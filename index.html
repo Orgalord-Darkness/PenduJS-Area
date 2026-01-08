@@ -11,22 +11,9 @@
         <div class="container" id="container">
             <h1>PenduJS - Area</h1>
             <div id="header">
-                <img src="assets/fichiers/jeff-the-killer.webp" alt="PenduJS" id="header-image" style="width: 100%; height: auto;"/>
+                <img src="assets/fichiers/red_tree.jpg" alt="PenduJS" id="header-image" style="width: 100%; height: auto;"/>
             </div>
             <button onClick="location.reload()">Recharger</button>
-            <div id="rules-section">
-                <h2>Règles du jeu</h2>
-                <ul>
-                    <li>facile : mot longueur max 4 et 8 essaies.</li>
-                    <li>moyen : mot longueur max 6 et 5 essaies.</li>
-                    <li>difficile : mot longueur max 8 et 3 essaies.</li>
-                    <li>Sélectinner un niveau de difficulté.</li>
-                    <li>Pour lancer une nouvelle partie cliquer sur commencer.</li> 
-                    <li>1 point par partie gagnée.</li>
-                    <li>Les lettres avec accents sont distinctes (e != é).</li>
-                </ul>
-            </div>
-
             <h1>Sélectionner un niveau de difficulté</h1>
             <select id="difficulte_input">
                 <option value="facile">Facile</option>
@@ -34,7 +21,7 @@
                 <option value="difficile">Difficile</option>
             </select>
 
-            <button id="start" style="margin-bottom: 50px;">Commencer</button>
+            <button id="start" style="margin-bottom: 10px;">Commencer</button>
             
             <div id="container_win"></div>
 
@@ -53,6 +40,18 @@
 
         <button id="affichage_compteur">Afficher le score</button>
         <div id="compteur"></div>
+            <div id="rules-section">
+                <h2>Règles du jeu</h2>
+                <ul>
+                    <li>facile : mot longueur max 4 et 8 essaies.</li>
+                    <li>moyen : mot longueur max 6 et 5 essaies.</li>
+                    <li>difficile : mot longueur max 8 et 3 essaies.</li>
+                    <li>Sélectinner un niveau de difficulté.</li>
+                    <li>Pour lancer une nouvelle partie cliquer sur commencer.</li> 
+                    <li>1 point par partie gagnée.</li>
+                    <li>Les lettres avec accents sont distinctes (e != é).</li>
+                </ul>
+            </div>
 
         <script type="module" src="assets/js/controller.js"></script>
     </body>

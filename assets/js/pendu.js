@@ -8,6 +8,7 @@ export default class Pendu{
     tries = [1]; 
     compteur = parseInt(localStorage.getItem("compteur")) || 0; 
     word_history = [];
+    letters = Array.from(this.word.length).fill("_");
 
     getWord(){
         return this.word; 
@@ -16,8 +17,6 @@ export default class Pendu{
     setWord(word){
         this.word = word; 
     }
-    
-    letters = Array.from(this.word.length).fill("_");
     
     setResponse(response){
         this.response = response; 
@@ -28,7 +27,7 @@ export default class Pendu{
     }
 
     getCompteur(){
-        document.getElementById("compteur").textContent = `${this.compteur} partie(s) gagnées`;
+        document.getElementById("compteur").textContent = `${this.compteur} partie(s) gagnée(s)`;
     }
 
     setCompteur(){
