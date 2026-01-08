@@ -26,3 +26,23 @@ export const getDifficulty = (level) => {
     }
     return word; 
 }
+
+export const getDifficultyTry = (level) => {
+    let nb_try = 0; 
+    switch(level){
+        case 'facile': 
+            nb_try = 8;
+            break;
+        
+        case 'moyen': 
+            nb_try = 5;
+            break ;
+        
+        case 'difficile':
+            nb_try = 3; 
+            break;
+        default: 
+            nb_try = 8; 
+    }
+    return nb_try; 
+}

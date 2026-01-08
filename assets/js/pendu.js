@@ -28,7 +28,7 @@ export default class Pendu{
     }
 
     getCompteur(){
-        document.getElementById("compteur").textContent = this.compteur;
+        document.getElementById("compteur").textContent = `${this.compteur} partie(s) gagnées`;
     }
 
     setCompteur(){

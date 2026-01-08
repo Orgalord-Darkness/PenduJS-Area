@@ -1,7 +1,7 @@
 import Pendu from './pendu.js'; 
 import {display, displayLetters, checkDisplay} from './display_word.js'; 
-import {getDifficulty} from './difficulty.js';
-import {penduAscii} from './ascii.js';
+import {getDifficulty, getDifficultyTry} from './difficulty.js';
+import {penduAscii,} from './ascii.js';
 
 const pendu = new Pendu();
 
@@ -10,6 +10,8 @@ let container_win = document.getElementById('container_win');
 let container_fail = document.getElementById('container_fail');
 let container_try = document.getElementById('container_try');
 let container_history = document.getElementById('container_history');
+let level = ''; 
+let ascii = ''; 
 
 document.getElementById('start').addEventListener('click', () => {
     
@@ -18,7 +20,7 @@ document.getElementById('start').addEventListener('click', () => {
     container_win.innerHTML = '';
     container_fail.innerHTML = ''; 
     container_history.innerHTML = ''; 
-    const level = document.getElementById('difficulte_input').value; 
+    level = document.getElementById('difficulte_input').value; 
     const word = getDifficulty(level);
     pendu.setWord(word);  
     container_word.innerHTML = display(word);
@@ -30,7 +32,7 @@ document.getElementById('tenter').addEventListener('click', () => {
     container_win.innerHTML = ''; 
     const word = pendu.getWord(); 
     const input = document.getElementById('input').value;
-    const nb_tries = 8; 
+    const nb_tries = getDifficultyTry(level); 
     let tentative = false; 
 
     if (input.length <= word.length){
@@ -59,7 +61,7 @@ document.getElementById('tenter').addEventListener('click', () => {
                 container_history.innerHTML = `<p> ${pendu.getWordHistory().join(" ; ")} </p>`
             
             } 
-            container_try.innerHTML = `<p>Tentatives : ${pendu.getNbTries()} /8</p>`
+            container_try.innerHTML = `<p>Tentatives : ${pendu.getNbTries()} / ${nb_tries}</p>`
         } else {
             container_fail.innerHTML = `<pre> ${penduAscii[pendu.getNbTries()]} </pre>`
             container_win.innerHTML = `<p>Perdu le mot était "${word}"</p>`;
