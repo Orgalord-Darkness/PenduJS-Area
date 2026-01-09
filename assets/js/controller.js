@@ -21,8 +21,7 @@ document.getElementById('start').addEventListener('click', () => {
     container_fail.innerHTML = ''; 
     container_history.innerHTML = ''; 
     level = document.getElementById('difficulte_input').value; 
-    const word = selectWord(level);  
-    console.log('word', word); 
+    const word = selectWord(level);
     pendu.setWord(word);  
     container_word.innerHTML = display(word);
 
@@ -33,7 +32,7 @@ document.getElementById('tenter').addEventListener('click', () => {
     container_win.innerHTML = ''; 
     const word = pendu.getWord(); 
     const input = document.getElementById('input').value;
-    const nb_tries = selectNbTries(level); 
+    const nb_tries = selectNbTries(level);
     let is_success = false; 
 
     if (input.length <= word.length){

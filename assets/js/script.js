@@ -22,17 +22,19 @@ export const word = randWord(words);
 
 
 export const selectWord  = (level) => {
+    if (!difficultyLevel[level]) {
+        return false;
+    }
     let word_choices = ''; 
+    let compteur_boucle = 0;
     do{
             word_choices = randWord(words); 
-    }while(word_choices.length <= difficultyLevel[level].minLength || word_choices.length >= difficultyLevel[level].maxLength); 
+            compteur_boucle++
+    }while(compteur_boucle < 100 && (word_choices.length <= difficultyLevel[level].minLength || word_choices.length >= difficultyLevel[level].maxLength)); 
     return word_choices; 
 };
 
 export const selectNbTries  = (level) => {
-    let nb_tries_choices = ''; 
-    do{
-        nb_tries_choices = randWord(words); 
-    }while(nb_tries_choices <= difficultyLevel[level].nb_try); 
-    return nb_tries_choices; 
+    const select_nb_tries =  difficultyLevel[level].nb_try;
+    return select_nb_tries; 
 };
